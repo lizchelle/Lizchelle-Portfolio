@@ -55,6 +55,10 @@ export default function ContactMe(props) {
             setBanner(res.data.msg)
             toast.success(res.data.msg)
             setBool(false)
+
+            setName("");
+            setEmail("");
+            setMessage("");
         }
     }catch(error) {
         console.log(error)
@@ -69,10 +73,12 @@ export default function ContactMe(props) {
           <h2 className="title">
             <Typical
               loop={Infinity}
-              steps={["Let's talk 📧.", 1000]}
+              steps={["Let's talk 📧", 1000,
+              "Let's Make Magic Together 📧", 4000,
+            ]}
             />
           </h2>{" "}
-          {""}
+          
           <a href="https://www.facebook.com/profile.php?id=100090759032471">
             <i className="fa fa-facebook-square"></i>
           </a>
